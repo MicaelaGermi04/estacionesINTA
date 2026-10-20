@@ -18,3 +18,5 @@ Imports:
     readr,
     ggplot2,
     lubridate
+URL: https://github.com/MicaelaGermi04/estacionesINTA
+BugReports: https://github.com/MicaelaGermi04/estacionesINTA/issues
