@@ -1,0 +1,20 @@
+Package: estacionesINTA
+Title: Lectura y Analisis de Datos Meteorologicos
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Micaela", "Germi", email = "micaelagermi@gmail.com", role = c("aut", "cre")),
+    person("Eugenia", "Cuenca", email = "eugemariacuenca@gmail.com", role = "aut")
+  )
+Description: Paquete de prueba para descargar, leer,
+    resumir y graficar datos de estaciones meteorologicas.
+    Desarrollado para practicar la creacion de paquetes
+    de R y el trabajo colaborativo mediante GitHub.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports:
+    dplyr,
+    tidyr,
+    readr,
+    ggplot2,
+    lubridate
