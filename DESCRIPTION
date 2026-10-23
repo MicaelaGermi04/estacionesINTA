@@ -17,6 +17,10 @@ Imports:
     tidyr,
     readr,
     ggplot2,
-    lubridate
+    lubridate,
+    cli,
+    utils,
+    stats,
+    grDevices
 URL: https://github.com/MicaelaGermi04/estacionesINTA
 BugReports: https://github.com/MicaelaGermi04/estacionesINTA/issues
