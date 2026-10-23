@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/MicaelaGermi04/estacionesINTA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MicaelaGermi04/estacionesINTA/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/MicaelaGermi04/estacionesINTA/graph/badge.svg)](https://app.codecov.io/gh/MicaelaGermi04/estacionesINTA)
 <!-- badges: end -->
 
 estacionesINTA es un paquete de R para descargar, leer, resumir y graficar datos de estaciones meteorológicas del INTA. Fue desarrollado como ejercicio práctico de la materia Programación II, para aprender a construir paquetes de R y trabajar de forma colaborativa con Git y GitHub.
