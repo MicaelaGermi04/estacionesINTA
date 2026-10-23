@@ -42,8 +42,8 @@ grafico_temperatura_mensual <- function(datos, colores = NULL, titulo = "Tempera
     ggplot2::labs(
       title = titulo,
       x = "Mes",
-      y = "Temperatura promedio (°C)",
-      color = "Estación"
+      y = "Temperatura promedio (\u00b0C)",
+      color = "Estacion"
     ) +
     ggplot2::theme_minimal()
 

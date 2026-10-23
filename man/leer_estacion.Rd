@@ -19,7 +19,9 @@ Descarga el archivo CSV de una estación del INTA si no existe en la ruta
 indicada y luego lo lee. Si el archivo ya existe, solo lo lee sin descargarlo.
 }
 \examples{
-estacion <- leer_estacion("NH0437", "NH0437.csv")
+ruta <- tempfile(fileext = ".csv")
+estacion <- leer_estacion("NH0437", ruta)
+unlink(ruta)
 
 
 }

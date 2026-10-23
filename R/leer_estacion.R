@@ -11,7 +11,9 @@
 #' @export
 #'
 #' @examples
-#' estacion <- leer_estacion("NH0437", "NH0437.csv")
+#' ruta <- tempfile(fileext = ".csv")
+#' estacion <- leer_estacion("NH0437", ruta)
+#' unlink(ruta)
 #'
 #'
 leer_estacion <- function(id_estacion, ruta) {
@@ -22,7 +24,7 @@ leer_estacion <- function(id_estacion, ruta) {
   )
 
   if (!file.exists(ruta)) {
-    cli::cli_inform("Descargando datos de la estación {id_estacion}...")
+    cli::cli_inform("Descargando datos de la estaci\u00f3n {id_estacion}...")
     utils::download.file(url = url, destfile = ruta)
   } else {
     cli::cli_inform("El archivo {ruta} ya existe, se lee sin descargar.")

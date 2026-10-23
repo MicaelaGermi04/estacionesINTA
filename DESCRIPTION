@@ -24,8 +24,8 @@ Imports:
     grDevices
 URL: https://github.com/MicaelaGermi04/estacionesINTA, https://micaelagermi04.github.io/estacionesINTA/
 BugReports: https://github.com/MicaelaGermi04/estacionesINTA/issues
-Depends: 
-    R (>= 3.5)
+Depends:
+    R (>= 4.1.0)
 LazyData: true
 Config/roxygen2/version: 8.1.1
 Suggests: 
