@@ -7,7 +7,7 @@ leer_estacion <- function(id_estacion, ruta) {
 
   if (!file.exists(ruta)) {
     cli::cli_inform("Descargando datos de la estación {id_estacion}...")
-    download.file(url = url, destfile = ruta)
+    utils::download.file(url = url, destfile = ruta)
   } else {
     cli::cli_inform("El archivo {ruta} ya existe, se lee sin descargar.")
   }

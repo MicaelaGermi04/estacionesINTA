@@ -2,34 +2,34 @@ grafico_temperatura_mensual <- function(datos, colores = NULL, titulo = "Tempera
 
   # Calcular el promedio mensual de temperatura
   resumen <- datos |>
-    mutate(mes = month(ymd(fecha))) |>
-    group_by(id, mes) |>
-    summarise(
+    dplyr::mutate(mes = lubridate::month(lubridate::ymd(fecha))) |>
+    dplyr::group_by(id, mes) |>
+    dplyr::summarise(
       temperatura_media_mensual = mean(temperatura_abrigo_150cm, na.rm = TRUE),
       .groups = "drop"
     )
 
   # Contar la cantidad de estaciones
-  cantidad_estaciones <- n_distinct(resumen$id)
+  cantidad_estaciones <- dplyr::n_distinct(resumen$id)
 
   # Elegir colores aleatorios si no se indican suficientes
   if (is.null(colores) || length(colores) < cantidad_estaciones) {
-    colores <- sample(colors(), cantidad_estaciones)
+    colores <- sample(grDevices::colors(), cantidad_estaciones)
   }
 
   # Crear el gráfico
   grafico <- resumen |>
-    ggplot(aes(mes, temperatura_media_mensual, color = id)) +
-    geom_line() +
-    scale_x_continuous(breaks = seq(1, 12, 1)) +
-    scale_color_manual(values = colores) +
-    labs(
+    ggplot2::ggplot(ggplot2::aes(mes, temperatura_media_mensual, color = id)) +
+    ggplot2::geom_line() +
+    ggplot2::scale_x_continuous(breaks = seq(1, 12, 1)) +
+    ggplot2::scale_color_manual(values = colores) +
+    ggplot2::labs(
       title = titulo,
       x = "Mes",
       y = "Temperatura promedio (°C)",
       color = "Estación"
     ) +
-    theme_minimal()
+    ggplot2::theme_minimal()
 
   return(grafico)
 }
