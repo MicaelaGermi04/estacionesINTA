@@ -27,7 +27,8 @@ Un tibble con los datos diarios de la estación.
 ## Examples
 
 ``` r
-estacion <- leer_estacion("NH0437", "NH0437.csv")
+ruta <- tempfile(fileext = ".csv")
+estacion <- leer_estacion("NH0437", ruta)
 #> Descargando datos de la estación NH0437...
 #> Warning: One or more parsing issues, call `problems()` on your data frame for details,
 #> e.g.:
@@ -43,5 +44,6 @@ estacion <- leer_estacion("NH0437", "NH0437.csv")
 #> 
 #> ℹ Use `spec()` to retrieve the full column specification for this data.
 #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+unlink(ruta)
 
 ```
