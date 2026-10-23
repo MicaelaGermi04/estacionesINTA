@@ -1,0 +1,80 @@
+---
+title: "estacionesINTA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{estacionesINTA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(estacionesINTA)
+```
+
+## Introducción
+
+El paquete estacionesINTA permite leer datos meteorológicos,
+resumir temperaturas por estación y graficar sus promedios mensuales.
+
+En esta viñeta usamos los datos de la estación NH0437 incluidos
+en el paquete.
+
+## Explorar los datos
+
+El conjunto estacion_nh0437 contiene registros entre el
+1 de agosto de 1970 y el 27 de abril de 2023.
+
+```{r}
+head(estacion_nh0437)
+```
+
+## Resumir la temperatura
+
+La función tabla_resumen_temperatura() calcula el promedio
+y el desvío estándar de la temperatura para cada estación.
+
+```{r}
+tabla_resumen_temperatura(estacion_nh0437)
+```
+
+## Graficar la temperatura mensual
+
+La función grafico_temperatura_mensual() calcula el promedio
+de temperatura para cada mes y estación. Los registros de un
+mismo mes de distintos años se resumen juntos.
+
+```{r}
+grafico_temperatura_mensual(
+  estacion_nh0437,
+  colores = "blue",
+  titulo = "Temperatura promedio mensual de NH0437"
+)
+```
+
+## Leer otra estación
+
+La función leer_estacion() recibe el código de una estación
+y la ruta donde se guardará su archivo. Si ese archivo ya
+existe, lo lee sin descargarlo nuevamente.
+
+Por ejemplo:
+
+```{r, eval=FALSE}
+otra_estacion <- leer_estacion(
+  id_estacion = "NH0437",
+  ruta = "NH0437.csv"
+)
+```
+
+
+
+
+
+
