@@ -1,4 +1,4 @@
 # License
 
     YEAR: 2026
-    COPYRIGHT HOLDER: estacionesINTA authors
+    COPYRIGHT HOLDER: Micaela Germi y Eugenia Cuenca

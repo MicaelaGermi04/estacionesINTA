@@ -78,6 +78,19 @@ grafico_temperatura_mensual(estacion_nh0437,
 
 ![](reference/figures/README-grafico-1.png)
 
+## Cómo contribuir
+
+Si encontrás un error o tenés una sugerencia, abrí un
+[issue](https://github.com/MicaelaGermi04/estacionesINTA/issues). Para
+proponer cambios, leé la [guía de
+contribución](https://micaelagermi04.github.io/estacionesINTA/CONTRIBUTING.md).
+
+## Código de conducta
+
+Este proyecto se publica con un [Código de Conducta para
+Contribuyentes](https://micaelagermi04.github.io/estacionesINTA/CODE_OF_CONDUCT.md).
+Al participar en él, aceptás cumplir sus términos.
+
 ## Autoras
 
 - Micaela Germi
