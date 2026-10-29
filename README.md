@@ -7,6 +7,9 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/MicaelaGermi04/estacionesINTA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MicaelaGermi04/estacionesINTA/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/MicaelaGermi04/estacionesINTA/graph/badge.svg)](https://app.codecov.io/gh/MicaelaGermi04/estacionesINTA)
 <!-- badges: end -->
 
 estacionesINTA es un paquete de R para descargar, leer, resumir y
@@ -81,6 +84,19 @@ grafico_temperatura_mensual(estacion_nh0437,
 ```
 
 <img src="man/figures/README-grafico-1.png" alt="" width="100%" />
+
+## Cómo contribuir
+
+Si encontrás un error o tenés una sugerencia, abrí un
+[issue](https://github.com/MicaelaGermi04/estacionesINTA/issues). Para
+proponer cambios, leé la [guía de
+contribución](.github/CONTRIBUTING.md).
+
+## Código de conducta
+
+Este proyecto se publica con un [Código de Conducta para
+Contribuyentes](CODE_OF_CONDUCT.md). Al participar en él, aceptás
+cumplir sus términos.
 
 ## Autoras
 

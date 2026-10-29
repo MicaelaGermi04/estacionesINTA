@@ -74,6 +74,15 @@ grafico_temperatura_mensual(estacion_nh0437,
                             titulo = "Temperatura promedio mensual - NH0437")
 ```
 
+## Cómo contribuir
+
+Si encontrás un error o tenés una sugerencia, abrí un [issue](https://github.com/MicaelaGermi04/estacionesINTA/issues).
+Para proponer cambios, leé la [guía de contribución](.github/CONTRIBUTING.md).
+
+## Código de conducta
+
+Este proyecto se publica con un [Código de Conducta para Contribuyentes](CODE_OF_CONDUCT.md). Al participar en él, aceptás cumplir sus términos.
+
 ## Autoras
 
 - Micaela Germi
