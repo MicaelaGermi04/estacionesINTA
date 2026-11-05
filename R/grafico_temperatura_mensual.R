@@ -5,8 +5,9 @@
 #'
 #'
 #' @param datos Un data frame con las columnas id, fecha y temperatura_abrigo_150cm.
-#' @param colores Un vector de colores, uno por estación. Si es NULL o no
-#'   alcanzan para todas las estaciones, se eligen colores al azar.
+#' @param colores Un vector de colores, uno por estación. Si es NULL se usan
+#'   los colores por defecto de ggplot2. Si hay menos colores que estaciones,
+#'   se avisa y se usan los colores por defecto.
 #' @param titulo Un texto con el título del gráfico. Por defecto "Temperatura".
 #'
 #' @returns Un gráfico de ggplot2.
@@ -28,9 +29,11 @@ grafico_temperatura_mensual <- function(datos, colores = NULL, titulo = "Tempera
   # Contar la cantidad de estaciones
   cantidad_estaciones <- dplyr::n_distinct(resumen$id)
 
-  # Elegir colores aleatorios si no se indican suficientes
-  if (is.null(colores) || length(colores) < cantidad_estaciones) {
-    colores <- sample(grDevices::colors(), cantidad_estaciones)
+  # Avisar si faltan colores en vez de cambiarlos sin decir nada
+  if (!is.null(colores) && length(colores) < cantidad_estaciones) {
+    warning("Hay menos colores que estaciones; se usan los colores por defecto de ggplot2.",
+            call. = FALSE)
+    colores <- NULL
   }
 
   # Crear el gráfico
@@ -38,7 +41,6 @@ grafico_temperatura_mensual <- function(datos, colores = NULL, titulo = "Tempera
     ggplot2::ggplot(ggplot2::aes(mes, temperatura_media_mensual, color = id)) +
     ggplot2::geom_line() +
     ggplot2::scale_x_continuous(breaks = seq(1, 12, 1)) +
-    ggplot2::scale_color_manual(values = colores) +
     ggplot2::labs(
       title = titulo,
       x = "Mes",
@@ -46,6 +48,10 @@ grafico_temperatura_mensual <- function(datos, colores = NULL, titulo = "Tempera
       color = "Estacion"
     ) +
     ggplot2::theme_minimal()
+
+  if (!is.null(colores)) {
+    grafico <- grafico + ggplot2::scale_color_manual(values = colores)
+  }
 
   return(grafico)
 }
