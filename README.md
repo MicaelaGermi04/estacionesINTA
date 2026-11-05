@@ -42,7 +42,7 @@ de la estación NH0437 entre 1970 y 2023.
 ## Instalación
 
 Podés instalar la versión en desarrollo de estacionesINTA desde
-[GitHub](https://github.com/) con:
+[GitHub](https://github.com/MicaelaGermi04/estacionesINTA) con:
 
 ``` r
 # install.packages("pak")

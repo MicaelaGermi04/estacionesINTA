@@ -41,7 +41,7 @@ Además trae el set de datos `estacion_nh0437`, con los registros diarios de la 
 
 ## Instalación
 
-Podés instalar la versión en desarrollo de estacionesINTA desde [GitHub](https://github.com/) con:
+Podés instalar la versión en desarrollo de estacionesINTA desde [GitHub](https://github.com/MicaelaGermi04/estacionesINTA) con:
 
 ``` r
 # install.packages("pak")
